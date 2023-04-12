@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="da">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  
+  <meta name="robots" content="noindex">
+  <script>
+    var themeFeedbackEnabled = true;
+    var themeFeedback = [];
+  </script>
+  
+
+  
+
+  
+    <title>Data - Galerucinae of the world</title>
+  
+  
+  
+  <meta name="description" content="We publish open data">
+  
+
+  
+
+
+  <!-- Language versions -->
+  
+    
+    
+    
+      
+    <link rel="alternate" hreflang="da" href="/da/observationer/sog/" />
+      
+    <link rel="alternate" hreflang="en" href="/occurrence/search/" />
+      
+    
+  
+
+  <!-- CSS -->
+  <!-- Bulma is included in main.css -->
+  <link rel="stylesheet" href="/assets/theme/css/main.css?v=1681335036">
+  <link rel="stylesheet" href="/assets/theme/css/font-awesome.min.css">
+
+  <!-- Feeds -->
+  <link rel="alternate" type="application/rss+xml" title="Galerucinae of the world - RSS feed" href="https://hp-template.gbif.org//feed.xml" >
+
+  <!-- favicon - to set a favicon add favicon.ico to your root folder -->
+  <!-- to add more favicon types, then add /_include/favicon.html to your project -->
+  
+
+  
+
+  
+</head>
+
+
+  <body class="">
+    
+    
+
+
+
+
+
+
+
+
+
+<nav class="navbar 
+   
+   
+  " 
+  
+  role="navigation" aria-label="main navigation">
+  <div class="navbar-content">
+    <div class="navbar-brand">
+      <a class="navbar-item navbar-logo" href="/da">
+        
+          <span class="navbar-item navbar-logo_text">Galerucinae of the world</span>
+        
+      </a>
+
+      
+        <a
+          role="button"
+          id="navbarBurger"
+          class="navbar-burger burger menu-toggle"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="mainNavbar"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      
+    </div>
+
+    
+    <div id="mainNavbar" class="navbar-menu">
+      <div class="navbar-start">
+        
+          
+            <a
+              class="navbar-top-item navbar-item"
+              href="/da/om"
+            >
+            Om
+          </a>
+          
+        
+          
+            <a
+              class="navbar-top-item navbar-item"
+              href="/da/observationer/sog"
+            >
+            Data
+          </a>
+          
+        
+          
+          <div class="navbar-top-item navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> Links </a>
+
+            <div class="navbar-dropdown">
+              
+                
+                  <a
+                    href="https://hp-base-theme.gbif-staging.org/"
+                    class="navbar-item "
+                  >
+                    Base tema demo
+                  </a>
+                
+              
+                
+                  <hr class="navbar-divider" />
+                
+              
+                
+                  <h6 class="has-text-grey navbar-item">Docs</h6>
+                
+              
+                
+                  <a
+                    href="https://jekyllrb.com/docs/pages/"
+                    class="navbar-item "
+                  >
+                    Jekyll dokumentation
+                  </a>
+                
+              
+                
+                  <a
+                    href="https://guides.github.com/features/mastering-markdown/"
+                    class="navbar-item "
+                  >
+                    Lær Markdown
+                  </a>
+                
+              
+                
+                  <a
+                    href="https://dev.to/paulasantamaria/introduction-to-yaml-125f"
+                    class="navbar-item "
+                  >
+                    Lær YAML
+                  </a>
+                
+              
+            </div>
+          </div>
+          
+        
+          
+            <a
+              class="navbar-top-item navbar-item"
+              href="/da/nyheder/"
+            >
+            Nyheder
+          </a>
+          
+        
+      </div>
+
+      
+        
+        
+        
+
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <div class="buttons language-selector">
+              <a class="button is-light">
+                <span>Dansk</span>
+                <span class="icon is-small">
+                  <i class="fa fa-language"></i>
+                </span>
+              </a>
+
+              <div class="navbar-dropdown is-right">
+                
+                <a class="navbar-item" href="/da/observationer/sog/">
+                  
+                  Dansk
+                </a>
+                
+                <a class="navbar-item" href="/occurrence/search/">
+                  
+                  English
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      
+      
+    </div>
+  </div>
+  
+</nav>
+
+
+    <main>
+
+      <div>
+          
+        <style>
+  .gbif-occurrenceSearchLayout, .__reakit-portal {
+    line-height: 1em;
+  }
+  .arrow > svg {
+    vertical-align: inherit;
+  }
+  body > main {
+    padding-bottom: 0;
+    background: #f1f5f8;
+  }
+  body > footer {
+    display: none;
+  }
+  label {
+    margin-bottom: 0;
+  }
+  h4 {
+    font-size: 14px;
+  }
+</style>
+
+<!--react and gbif component-->
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/2.1.1/mapbox-gl.min.css" integrity="sha512-j4BKLk7HB2Umio2SKGP4gh1L3jouxJDuBxcWoq4kf1fYIkJyXQUGxs9me8yz2wexxAIHIcQHzn64UfPIG232xQ==" crossorigin="anonymous" />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/openlayers/6.1.1/ol.min.css' />
+
+
+<script type="text/javascript" src="https://react-components.gbif-staging.org/lib/gbif-react-components.js"></script>
+<!-- <script type="text/javascript" src="http://localhost:5000/dist/lib/gbif-react-components.js"></script> -->
+
+
+<!-- useful variables -->
+<script>
+var pageLang = 'da';
+var rootLang = 'en';
+var basename = pageLang === rootLang ? undefined : pageLang;
+</script>
+
+<script type="text/javascript" src="/assets/theme/js/config.js"></script>
+
+
+
+
+
+
+<div id="root"></div>
+<script>
+  var widgetLocale = 'da';
+  var userTheme = typeof siteTheme !== 'undefined' ? siteTheme : undefined;
+  var userConfig = typeof siteConfig !== 'undefined' ? siteConfig : {};
+  var routes = userConfig.routes || {};
+  routes.basename = basename;
+  var occurrenceConfig = userConfig.occurrence ? userConfig.occurrence : userConfig;
+
+  ReactDOM.render(
+    React.createElement(
+      gbifReactComponents.OccurrenceSearch,
+      { 
+        style: { minHeight: 'calc(100vh - 4.25rem)' }, 
+        siteConfig: {
+          ...siteConfig,
+          occurrence: occurrenceConfig, // as temporary overwrite until the HPs have been updated to the new configuration schema
+          theme: userTheme, 
+          routes: routes,
+          locale: widgetLocale
+        },
+        pageLayout: true,
+      }
+    ),
+    document.getElementById('root')
+  );
+
+  if (typeof userTheme === 'undefined') {
+    console.warn('No theme defined - using default styling');
+  }
+  if (typeof occurrenceConfig === 'undefined') {
+    console.warn('No config provided - all data will be shown');
+  }
+</script>
+
+
+      </div>
+    </main>
+    
+    
+
+<div class="terms-notice is-hidden" id="termsNotice">
+  <p>We use cookies on our website. Some are technically necessary, others help us improve your user experience. You can decline non-essential cookies by selecting “Reject”. Please see our <a href="/privacy">Privacy Policy</a> for further information about our privacy practices and use of cookies.</p>
+
+  <div style="margin-top: 8px">
+    <button class="button is-primary" onclick="gbif_acceptCookies();">
+      Accept
+    </button>
+    <button class="button is-error" onclick="gbif_rejectCookies();">
+      Reject
+    </button>
+  </div>
+</div>
+    
+
+<footer>
+  <div class="footer">
+    <div>
+      
+        
+        
+        
+        <div class="lang-options">
+            <em>Læs på:</em>
+            <ul>
+            
+            <li>
+              <a href="/da/observationer/sog/" class="da" title="View in da">
+                <!--  -->
+                Dansk
+              </a>
+            </li>
+            
+            <li>
+              <a href="/occurrence/search/" class="en" title="View in en">
+                <!--  -->
+                English
+              </a>
+            </li>
+            
+            </ul>
+        </div>
+        
+      
+    </div>
+    <div>
+      <div class="footer-groups">
+        
+        <div class="footer-column">
+          <p class="footer-column-name">Partnere</p>
+          
+          
+          <ul class="footer-links">
+            
+            <li>
+              <a href="http://example.com">Navn på projektpartner</a>
+            </li>
+            
+            <li>
+              <a href="http://example.com">Name of project partner 2</a>
+            </li>
+            
+          </ul>
+          
+          
+          
+
+        </div>
+        
+        <div class="footer-column">
+          <p class="footer-column-name">Code</p>
+          
+          <div class="footer-description">
+            <p>This project is open source. See <code class="language-plaintext highlighter-rouge">_data/footer.yml</code> to customize the footer.</p>
+
+          </div>
+          
+          
+          
+          
+
+        </div>
+        
+        <div class="footer-column">
+          <p class="footer-column-name">Contact</p>
+          
+          <div class="footer-description">
+            <p>Social icons links defined in <code class="language-plaintext highlighter-rouge">_config.yml</code></p>
+<ul>
+  <li>Street name</li>
+  <li>1234 postal code</li>
+  <li>Country</li>
+</ul>
+
+          </div>
+          
+          
+          
+          
+          <ul class="footer-online-list">
+            
+            <li>
+              <a href="https://twitter.com/yourname">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+            
+            <li>
+              <a href="https://github.com/yourname">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+            
+            
+            
+          </ul>
+          
+
+        </div>
+        
+      </div>
+
+      
+
+    </div>
+  </div>
+  <div class="footer-hostedby">
+    <div><a href="https://gbif.org/hosted-portals"><img src="/assets/theme/img/hostedby.svg"/></a></div>
+  </div>
+</footer>
+
+<script>
+  ;
+  var currentLocale = 'en';
+</script>
+
+<script src="/assets/theme/js/script.js?v=1681335036"></script>
+
+
+
+
+
+  </body>
+</html>
